@@ -1,11 +1,17 @@
 
-
+# DRY - don't repeat yourself
 
 def main(args):
-    a = input("Podaj 1. liczbę: ")
+    a = int(input("Podaj 1. liczbę: "))
     print(a)
-    b = input("Podaj 2. liczbę: ")
+    b = int(input("Podaj 2. liczbę: "))
     print(b)
+    
+    print("Suma", a + b)
+    print("Różnica", a - b)
+    print("Iloczyn", a * b)
+    print("Iloraz", a / b)
+    
     
     return 0
 
