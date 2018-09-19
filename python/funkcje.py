@@ -8,18 +8,21 @@ def witaj():
     imie = input("Podaj swoje imię ")
     print("Witaj", imie, "!" )
     
-def suma(l1, l2):
-    print("Suma:", l1 + l2) 
+    
+def suma2(a, b):
+    """
+    Funkcja sumuje dwie liczby i zwraca wynik
+    """
+    return a + b
     
 def roznica(l1, l2):
-    print("Różnica:", l1 - l2)  
-    
+    pass
+        
 def iloczyn(l1, l2):
-    print("Iloczyn:", l1 * l2)   
+    pass
     
 def iloraz(l1, l2):
-    print("Iloraz:", l1 / l2) 
-    
+    pass
 
 def hello():
     print("Witaj, jestem Python!")
@@ -33,12 +36,12 @@ def main(args):
     print(b)
     
     #print("Suma:", a + b)
-    suma(a, b)
+    #suma(a, b)
     roznica(a, b)
     iloczyn(a, b)
     iloraz(a, b)
     
-    #print("Suma", a + b)
+    print("Suma", suma2(a, b))
     #print("Różnica", a - b)
     #print("Iloczyn", a * b)
     #print("Iloraz", a / b)
