@@ -10,6 +10,12 @@ def main(args):
     start = int(input("Podaj 1. liczbę: "))
     stop = int(input("Podaj 2. liczbę: "))
     
+    while start >= stop:
+        print("Błąd. Podaj większą liczbę:")
+        stop = int(input("Podaj 2. liczbę:"))
+    
+    
+    
     if start >= stop:
         print("Błędne dane")
         exit(0)
