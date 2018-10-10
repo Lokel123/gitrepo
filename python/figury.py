@@ -23,8 +23,9 @@ def prostokat2(a, b, znak, znak2):
 
 def choinka(h, znak):
     
-    for k in range(h):
-        if k == 0 or k == 
+    for i in range(h):
+        for j in range(h):
+            if j == 0
     
     
     
