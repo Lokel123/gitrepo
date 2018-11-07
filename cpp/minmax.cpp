@@ -30,8 +30,8 @@ void minmax(int tab[], int rozmiar){
                 maximum = tab[i];
         
             }
-        cout << "Największa liczba" << maximum << endl;
-        cout << "Najmniejsza liczba" << minimum << endl;
+        cout << "Największa liczba: " << maximum << endl;
+        cout << "Najmniejsza liczba: " << minimum << endl; //cout - drukuj
 }
 
 int main(int argc, char **argv)
