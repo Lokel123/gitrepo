@@ -23,7 +23,7 @@ def main(args):
     turtle.color('red', 'blue')
     turtle.begin_fill()
     turtle.speed(0)
-    figura_rek(200, 5, 50, 10)
+    figura_rek(200, 105, 100, 10)
     
     
     turtle.end_fill()
