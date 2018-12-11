@@ -3,6 +3,12 @@
 #
 #  potega.py
 
+def silnia_re(n):
+    if n == 0:
+        return 1
+    return silnia_re(n-1) * n
+
+
 def silnia_it(n):
     
     wynik = 1
