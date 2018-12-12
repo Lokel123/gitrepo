@@ -23,12 +23,12 @@ long int fibonacci_it(int n) {
 }
 
 
-long int fibonacci_it(int n) {
+long int fibonacci_re(int n) {
     if (n == 0)
         return 0;
     if (n == 1)
         return 1;
-    return fibonacci_it(n-1) + fibonacci_it(n-2);
+    return fibonacci_re(n-1) + fibonacci_re(n-2);
 
 
 }
@@ -41,9 +41,11 @@ int main(int argc, char **argv)
     cin >> n;
     cout << "Ciąg Fibonacciego do wyrazu " << n << ":" << endl;
     // dodać kod  pokazujażcy wszystkie wyrazy aż do końca ciągu
-	cout << fibonacci_it(n);
-    
-    
+    for (int i = 0; i <= n; i++ ) {
+        if (n > 0)
+            cout << (float)fibonacci_it(i+1) / (float)fibonacci_it(i) << endl;
+    }
+    cout << fibonacci_re(n);
 	return 0;
 }
 
