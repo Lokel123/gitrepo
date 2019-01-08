@@ -46,10 +46,23 @@ void sort_selection(int tab[],int n){
     for (i = 0; i < n, i++) {
         k = i; //indeks najmniejszego elementu
         for (j = i+1,j < n,j++){
-        if (tab[j] < tab[k])
-            k = j;
+            if (tab[j] < tab[k])
+                k = j;
         }
-        zamien1(tab[i], tab[k])
+        zamien1(tab[i], tab[k]);
+    }
+    
+}
+void sort_insert(int tab[],int n){
+    int i, el, k;
+    for (i = 1; i < n, i++) {
+        el = tab[i];
+        k = i-1; //indeks najmniejszego elementu
+        while (k => 0 && tab[k]>el ) {
+            tab[k+1] = tab[k];
+            k--;
+        }
+        tab[k+1] = el;
     }
     
 }
@@ -61,11 +74,10 @@ int main(int argc, char **argv)
     wypelnij(tab, roz);
     cout << endl;
     drukuj(tab, roz);
-    cout << endl << endl;
     //sort_bubble(tab, roz);
-    sort_selection(tab, roz);
+    //sort_selection(tab, roz);
+    sort_insert(tab, roz);
     drukuj(tab, roz);
-    zamien1(5, 10);
     cout << endl;
     
 	return 0;
