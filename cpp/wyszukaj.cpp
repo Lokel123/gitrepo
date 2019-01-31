@@ -14,10 +14,10 @@ void wypelnij(int tab[], int rozmiar){
 }
 
 void drukuj(int tab[], int rozmiar){
-        for(int i = 0; i<rozmiar; i++) {
-            cout << tab[i] << " ";
-            }
-            cout << endl << endl;
+    for(int i = 0; i<rozmiar; i++) {
+        cout << tab[i] << " ";
+    }
+    cout << endl << endl;
 }
 
 void sort_insert(int tab[],int n){
@@ -35,19 +35,26 @@ void sort_insert(int tab[],int n){
 }
 
 int szukaj_lin(int tab, int n, int szuk) {
-    for (int i = 0; i < n; i++) {
-    if (tab[i] == szuk)
-        return i;
-    else
-        return -1;
+    for (int i = 0; i < n; i++) 
+        if (tab[i] == szuk)
+            return i;
+    return -1;
         
         
-    }
 }
 
-int wyszukaj_bin(int tab[], int n, int szuk) {
-    
-    
+int szukaj_bin_it(int tab[], int n, int szuk) {
+    int p, k, s; // p poczatek, k koniec, s srodek
+    p = 0;
+    k = n - 1;
+    while (p <= k) {
+        s = (p + k)/2;
+        if (tab[s] == szuk) return s;
+        else if (szuk < tab[s])
+        k = s-1;
+        else p = s + 1;
+    }
+    return -1;
 }
 
 int main(int argc, char **argv)
@@ -59,6 +66,9 @@ int main(int argc, char **argv)
     int szuk = 0;
     cout << "Podaj szukany element:"; cin >> szuk;
     int indeks;
+    sort_insert(tab, n);
+    drukuj(tab, n);
+    indeks = szukaj_bin_it(tab, n, szuk);
     if (szukaj_lin(tab, n, szuk))
         cout << "Znaleziono";
     else
