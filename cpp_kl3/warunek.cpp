@@ -1,8 +1,5 @@
-/*
- * minmax.cpp
- */
-
-
+*
+ * warunek.cpp
 #include <iostream>
 
 using namespace std;
